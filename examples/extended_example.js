@@ -1,6 +1,6 @@
 #!/usr/bin/gjs
 
-const Gtk = imports.gi.Gtk;
+const {GObject,Gtk} = imports.gi;
 
 Gtk.init(null);
 
@@ -17,7 +17,7 @@ class MyWindow extends Gtk.Window {
     }   
 }
 
-GObject.registerClass(MyClass);
+GObject.registerClass(MyWindow);
 
 let win = new MyWindow();
 win.connect("delete-event", Gtk.main_quit);
